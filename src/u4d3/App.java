@@ -1,5 +1,7 @@
 package u4d3;
 
+import u4d3.entities.Rectangle;
+
 public class App {
 	public static void main(String[] args) {
 
@@ -116,6 +118,25 @@ public class App {
 //			}
 //			System.out.println("i:" + i);
 //		}
+
+		Rectangle r1 = new Rectangle(21, 5.0);
+		System.out.println(r1.getArea());
+
+		Rectangle[] rectangles = { r1, new Rectangle(5.4, 22.0), new Rectangle(5, 4) };
+
+		for (int i = 0; i < rectangles.length; i++) {
+
+			System.out.println("L'area del rettangolo è: " + rectangles[i].getArea() + ",il perimetro è "
+					+ rectangles[i].getPerimeter());
+
+			System.out.printf("L'area del rettangolo è: %f, il perimetro è %f \n", rectangles[i].getArea(),
+					rectangles[i].getPerimeter());
+			// %f è il segnaposto da utilizzare per sostituire nella stringa un valore
+			// Double
+			// altri segnaposti utili sono ad es %s(per le stringhe), %d(per gli interi),
+			// %b(per i booleani)
+		}
+
 
 	}
 
